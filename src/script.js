@@ -23,12 +23,13 @@ function generatePassword() {
   }
 
   if (
-    (!checkbox[0].checked) &&
     (!checkbox[1].checked) &&
     (!checkbox[2].checked) &&
-    (!checkbox[3].checked)
+    (!checkbox[3].checked) &&
+    (!checkbox[4].checked)
   ) {
     alert("Please choose at least one character type.");
+    return;
   }
 
   let pswdOption = [];
