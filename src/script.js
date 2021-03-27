@@ -12,7 +12,6 @@ const isUppercase = document.querySelector("#uppercase");
 const isNumber = document.querySelector("#numbers");
 const isSymbol = document.querySelector("#symbols");
 let checkbox = document.querySelector("form");
-console.log(checkbox)
 
 // Generate Random Password
 function generatePassword() {
@@ -24,10 +23,10 @@ function generatePassword() {
   }
 
   if (
-    checkbox[0].checked == false &&
-    checkbox[1].checked == false &&
-    checkbox[2].checked == false &&
-    checkbox[3].checked == false
+    (!checkbox[0].checked) &&
+    (!checkbox[1].checked) &&
+    (!checkbox[2].checked) &&
+    (!checkbox[3].checked)
   ) {
     alert("Please choose at least one character type.");
   }
