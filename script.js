@@ -16,8 +16,6 @@ console.log(checkbox)
 
 // Generate Random Password
 function generatePassword() {
-
-  // Source: https://www.w3schools.com/jsref/prop_text_value.asp
   let pswdLength = document.querySelector("#length").value;
 
   if (pswdLength < 8 || pswdLength > 128) {
@@ -25,7 +23,6 @@ function generatePassword() {
     return;
   }
 
-  // Source: https://stackoverflow.com/questions/11234622/simple-javascript-checkbox-validation
   if (
     checkbox[0].checked == false &&
     checkbox[1].checked == false &&
@@ -39,7 +36,6 @@ function generatePassword() {
   let pswdResult = [];
 
   // Selecting Character Types (Checkbox)
-  // Source: https://www.samanthaming.com/tidbits/49-2-ways-to-merge-arrays/
   if (isLowercase.checked) {
     pswdOption = pswdOption.concat(lowercase);
   }
@@ -53,9 +49,7 @@ function generatePassword() {
     pswdOption = pswdOption.concat(symbols);
   }
 
-
   // Create Random Combination of Characters
-  // Source: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
   for (i = 0; i < pswdLength; i++) {
     pswdResult.push(pswdOption[Math.floor(Math.random() * pswdOption.length)]);
   }
@@ -63,14 +57,12 @@ function generatePassword() {
   return pswdResult.join("");
 }
 
-
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

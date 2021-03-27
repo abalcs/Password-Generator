@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 html,
@@ -14,7 +15,11 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: lightgray;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -27,33 +32,25 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 h2 {
     text-align: center;
-    color: lightseagreen;
+    color: rgb(12, 11, 11);
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: grey 0px 0px 5px 5px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
-  margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
 }
-
-/* .card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-} */
 
 form {
     text-align: center;
@@ -86,8 +83,8 @@ form input #id {
 
 .btn {
   border: none;
-  background-color: lightseagreen;
-  border-radius: 25px;
+  background-color: rgb(250, 133, 0);
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -138,6 +135,12 @@ button[disabled] {
 
   #password {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 1225px) {
+  .body {
+    background-size: cover;
   }
 }
 
