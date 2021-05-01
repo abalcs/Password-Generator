@@ -4,6 +4,9 @@
 
 Link to live website: (https://abalcs.github.io/Password-Generator/)
 
+## Tech Used
+HTML, CSS, JavaScript
+
 ## Instructions
 To create a password generator that takes user inputs to create a randomized string of characters.
 
